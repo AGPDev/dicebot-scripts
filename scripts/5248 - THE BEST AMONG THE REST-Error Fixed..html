@@ -1,0 +1,1352 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src='https://www.google.com/recaptcha/api.js?render=explicit'></script>
+    <title>
+	DiceBot Script: THE BEST AMONG THE REST-Error Fixed.
+</title><meta name="author" content="seuntjie" />
+
+    <script type="text/javascript" src="../Scripts/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-33756749-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+    <script type="text/javascript">
+        function CleanSubmit(els)
+        {
+            for (i=0; i<els.length;i++)
+            {
+                var El = document.getElementById(els[i]);
+                var str = El.value;
+                str = str.replaceAll("<", "&lt;");
+                str = str.replaceAll(">", "&gt;");
+                str = str.replaceAll("[", "\[");
+                str = str.replaceAll("]", "\]");
+                El.value = str;
+            }
+        }
+        String.prototype.replaceAll = function (search, replace) {
+            //if replace is not sent, return original string otherwise it will
+            //replace search string with 'undefined'.
+            if (replace === undefined) {
+                return this.toString();
+            }
+
+            return this.replace(new RegExp('[' + search + ']', 'g'), replace);
+        };
+    </script>
+<link href="App_Themes/default/Default.css" type="text/css" rel="stylesheet" /><link href="App_Themes/default/DefaultCustom.css" type="text/css" rel="stylesheet" /><style type="text/css">
+	.TreeView1_0 { text-decoration:none; }
+	.TreeView1_1 { border-style:none; }
+	.TreeView1_2 { padding:0px 0px 0px 0px; }
+	.TreeView1_3 { border-style:none; }
+	.TreeView1_4 {  }
+	.TreeView1_5 { color:#000006; }
+	.TreeView1_6 { padding:0px 0px 0px 0px; }
+	.TreeView1_7 { color:LightGrey;text-decoration:underline; }
+	.TreeView1_8 { color:LightGrey;text-decoration:underline; }
+
+</style></head>
+<body>
+    <form method="post" action="./scripts.aspx?id=5248" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="TreeView1_ExpandState" id="TreeView1_ExpandState" value="ennnnnnnnncnnnnnncnnnnncnnnnnn" />
+<input type="hidden" name="TreeView1_SelectedNode" id="TreeView1_SelectedNode" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="TreeView1_PopulateLog" id="TreeView1_PopulateLog" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZNW4awoZQOQMC8c7hZKgnPjk-7uXWo0GzoKVlpKWE4ZKV5g5l_xnKJ1IfcDbZQXrgw2&amp;t=637103346965614113" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=agSMDUXPN-pREW5QhKjBzExTfoT-meByRE8sDUzoRZ6ptbqQSzRbK6znFzYlRwklHRaScb5aCXhe4yrHfazFDcIvE-DjCB6OZ_JmBTzSGkBrc5chtDMQ2nYtsB18j4flahTyrj1T9_vjZQAAkndmCg2&amp;t=ffffffff93f2983c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+    function TreeView_PopulateNodeDoCallBack(context,param) {
+        WebForm_DoCallback(context.data.treeViewID,param,TreeView_ProcessNodeData,context,TreeView_ProcessNodeData,false);
+    }
+var TreeView1_Data = null;//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvlL9lzMC6Iu9P6tUHn7Ar46DL044gBHL2DH1WjMVFD7X9AXtWdW9OufAZkSH1M7OAt79SsDugg_NRjAVGPwhH6lpvf_38wNmmGPVEaPoSlEd8F2F69yZnII1RbwpVj--MuYFDpl8glbP65-tXwfTGcQ1&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OIWg3MVKYUDew-Jrx5vsYfl59PeW2MHtjRu6kk6t8KiV08zwwjoX2qHwP41lYaiZDzU_GKVip7MaOA9dKxt5Kc_wlBs1iZX6fRgqpa2DMiXYYAKDMrYqIxpSYrYWNNkn1KyTO0tzfIoIff145hv33-A1&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1845ED39" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="oyOVt2T+F2MR5PPV4EE5WZa2hok6Pl7j5zd51J3NSeLCWKHy2TwNvREIM3lQsD63lFQY63eCcsYX9yCn7iaV1zARo2ZQjBXHAdgJCvXZzjNUCUdmXM1kKCAFprnle0qu2oAqTj2k7dYJ1Ic7tljQQxIUidHa/jLGXcRsFgVMne2PL5Kmlq1J2VltxhqRHWvhXkzPq6eZ/uSsSjeRcjXkyRpZ5ssU6Oh8vuxTE9klAB+ERTVO/i6UpZX5nuam9TBI0XSe9znJYuA8VUguIrB5AbwOJvmaTCM0z4bA2sR9HMy56/wPjA27H3/+73LxBGtg" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl03', 'form1', ['tctl00$ContentPlaceHolder1$cbScriptComments$upnlComments','ContentPlaceHolder1_cbScriptComments_upnlComments','tctl00$ContentPlaceHolder1$cbScriptComments$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl01_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl02$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl02_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl03$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl03_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl01$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlComment'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="main" class="main">
+        <div class="add"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- bot side add -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:250px"
+     data-ad-client="ca-pub-7094887246667995"
+     data-ad-slot="7127215769"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br/><br/>
+<a class="twitter-timeline" href="https://twitter.com/SeuntjieDiceBot" data-widget-id="740092672929632256">Tweets by @SeuntjieDiceBot</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+        <div id="DivPlaceholder">
+
+        
+	    <div id="navDiv">
+            
+		    <div id="Ellipse"><a href="/"> <img src="/Images/logo3.png" style="position:relative; left:-5px;" alt="DiceBot Logo Image"/></a>
+		    </div>
+            <a href="#TreeView1_SkipLink" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip Navigation Links.</a><div id="TreeView1" style="margin-top:10px;">
+	<table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><a id="TreeView1n0" href="javascript:TreeView_ToggleNode(TreeView1_Data,0,document.getElementById(&#39;TreeView1n0&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n0Nodes&#39;))"><img src="/WebResource.axd?d=wD47hdxDDlcs_QgdIMJev9hQoLuQgJwxj_MyP2KkJ7_OTXpcjVSPReY3t-kWJwc45PJYVQZlQVNKdvOm06GjuuZT0n811fn6gUcggcMaYZ81&amp;t=637103346965614113" alt="Collapse &lt;div class=&#39;Txt_Settings&#39;>DiceBot&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="botpage.aspx" id="TreeView1t0" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>DiceBot</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n0Nodes" style="display:block;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="GettingStarted.aspx" id="TreeView1t1" style="border-style:none;font-size:1em;">Getting Started</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Downloads.aspx" id="TreeView1t2" style="border-style:none;font-size:1em;">Downloads</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Details.aspx" id="TreeView1t3" style="border-style:none;font-size:1em;">Bot Details</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="ProgrammerMode.aspx" id="TreeView1t4" style="border-style:none;font-size:1em;">Programmer Mode</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="http://github.com/seuntjie900/DiceBot" id="TreeView1t5" style="border-style:none;font-size:1em;">Source Code</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="features.aspx" id="TreeView1t6" style="border-style:none;font-size:1em;">Site Features</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://dice.seuntjie.com" id="TreeView1t7" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Play!</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="settings.aspx" id="TreeView1t8" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Settings</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Scripts.aspx" id="TreeView1t9" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Scripts</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n10" href="javascript:TreeView_ToggleNode(TreeView1_Data,10,document.getElementById(&#39;TreeView1n10&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n10Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>Bet Systems&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="BettingSystem.aspx" id="TreeView1t10" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Bet Systems</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n10Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=3" id="TreeView1t11" style="border-style:none;font-size:1em;">d'Alembert</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=4" id="TreeView1t12" style="border-style:none;font-size:1em;">Fibonacci</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=2" id="TreeView1t13" style="border-style:none;font-size:1em;">Labouchere</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=1" id="TreeView1t14" style="border-style:none;font-size:1em;">Martingale</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=5" id="TreeView1t15" style="border-style:none;font-size:1em;">Preset List</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="seuntjiebot.aspx" id="TreeView1t16" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>SeuntjieBot</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n17" href="javascript:TreeView_ToggleNode(TreeView1_Data,17,document.getElementById(&#39;TreeView1n17&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n17Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>Reviews&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="Reviews.aspx" id="TreeView1t17" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Reviews</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n17Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=14" id="TreeView1t18" style="border-style:none;font-size:1em;">crypto-games</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=1" id="TreeView1t19" style="border-style:none;font-size:1em;">Just-dice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=3" id="TreeView1t20" style="border-style:none;font-size:1em;">Prime Dice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=6" id="TreeView1t21" style="border-style:none;font-size:1em;">SafeDice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://forum.seuntjie.com" id="TreeView1t22" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Forum</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n23" href="javascript:TreeView_ToggleNode(TreeView1_Data,23,document.getElementById(&#39;TreeView1n23&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n23Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>FAQ&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="FAQs.aspx" id="TreeView1t23" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>FAQ</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n23Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="FAQs.aspx?topic=1" id="TreeView1t24" style="border-style:none;font-size:1em;">DiceBot</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="FAQs.aspx?topic=2" id="TreeView1t25" style="border-style:none;font-size:1em;">SeuntjieBot</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Contact.aspx" id="TreeView1t26" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Contact</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Donate.aspx" id="TreeView1t27" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Donate</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://www.microsoft.com/store/apps/9NBLGGH4NC5R" id="TreeView1t28" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>CryptoPrice</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="javascript:__doPostBack(&#39;ctl00$TreeView1&#39;,&#39;s&lt;div class=\&#39;Txt_Settings\&#39;>&lt;a href=\&#39;https://www.youtube.com/channel/UC76fh_3HRaPDxuenoY3gW-w\&#39;>&lt;img src=\&#39;/images/yt.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://twitter.com/SeuntjieDiceBot\&#39;>&lt;img src=\&#39;/images/tw.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://www.facebook.com/ThisIsSeuntjie\&#39;>&lt;img src=\&#39;/images/fb.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://discord.gg/BSjXjMX\&#39;>&lt;img src=\&#39;/images/dc.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>&lt;/div>&lt;div id=\&#39;Line2\&#39;>&lt;/div>&#39;)" onclick="TreeView_SelectNode(TreeView1_Data, this,&#39;TreeView1t29&#39;);" id="TreeView1t29" style="border-style:none;font-size:1em;"><div class='Txt_Settings'><a href='https://www.youtube.com/channel/UC76fh_3HRaPDxuenoY3gW-w'><img src='/images/yt.png' height='32', width='32'/></a>
+					<a href='https://twitter.com/SeuntjieDiceBot'><img src='/images/tw.png' height='32', width='32'/></a>
+					<a href='https://www.facebook.com/ThisIsSeuntjie'><img src='/images/fb.png' height='32', width='32'/></a>
+					<a href='https://discord.gg/BSjXjMX'><img src='/images/dc.png' height='32', width='32'/></a></div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table>
+</div><a id="TreeView1_SkipLink"></a>
+		    
+		    
+		    
+		    <div class="clearFloat"></div>
+		    <div class="Txt_Donate">
+			
+				    
+                        
+			    
+		    </div>
+		    <div class="clearFloat"></div>
+	    </div>
+            </div>
+	    <div id="colwrap1">
+		<div style="font-size:16px; text-align:center; width:100%; background-color:lightgray">
+		<a href="https://forum.seuntjie.com" style="font-weight:bold; font-size:1.2em;">Need help with the bot or want someone to talk to? <br><span style="font-size:1.3em;">FORUM.SEUNTJIE.COM</span></a>
+	<p style="font-weight:bold; font-size:1em;">The forum is a good platform for asking or offering help with programmer mode scripts</p>
+    </div>
+            <div class="loginDisplay" style="float:right">
+                    <a id="LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="LoginView1_HeadRegister">Register</a>
+                        
+                </div>
+		    <div class="Txt_TITLE">
+			<!--<div style="font-size:0.3em;background-color:lightblue;margin:-5px;padding:10px">Help me fund a 3D printer: <a href="https://bitcointalk.org/index.php?topic=1422705">https://bitcointalk.org/index.php?topic=1422705</a></div>-->
+				    <p class="lastNode">
+    LUA Scripts
+
+			    </p>
+		    </div>
+		    <div class="clearFloat"></div>
+		    <div class="Txt_text">
+			
+				    
+    <span style="width: auto">Download a script for your bot, or upload your own to share with other users.</span><span style="width: auto; padding-left: 15px; margin-left: auto; margin-right: 0px; text-align: right; right: 0px">        <a id="ContentPlaceHolder1_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_LoginView1_HeadRegister">Register</a> to upload
+                        </span>
+    <br />
+    <br/>
+    <div class="prettyprint">
+        <script type="text/javascript">
+            function Show()
+            {
+                var el = document.getElementById("HowToUse");
+                if (el.style.display == "none")
+                    el.style.display = "";
+                else el.style.display = "none";
+            }
+        </script>
+        <a href="#"><div onclick="Show()">How do I use this?</div></a>
+        <div id="HowToUse" style="display:none;"><br /><ol>
+            	<li>Click the View script Button while viewing a script.</li>
+            <li>Open your bot. </li>
+            <li>Set the settings mode to programmer mode. </li>
+            <li>Paste the script above into the code box. </li>
+            <li>Go to the console tab. </li>
+           <li>Type nextbet = xx.xxxx and press enter in the input box at the bottom, where xx.xxxx is the amount of your first bet. </li>
+            <li>Type start() and press enter to start the bot, and stop() to stop to the bot. (you need to be logged in before starting the bot)</li></ol>
+            <br />
+             See <a href="https://bot.seuntjie.com/ProgrammerMode.aspx">The programmer mode page</a> for more information on the programmer mode
+            
+        </div> 
+                </div>
+    <br />
+    <br />
+    <div id="ContentPlaceHolder1_pnlSingleScript">
+	
+        <table id="ContentPlaceHolder1_tblSettingsDetails" cellpadding="5" align="Left" style="width:90%;">
+		<tr style="padding-top: 15px">
+			<th align="right" valign="top" style="width:100px;">Name:</th><td align="left"><span id="ContentPlaceHolder1_lblSettingsName" class="settingslabel">THE BEST AMONG THE REST-Error Fixed.</span></td>
+		</tr><tr style="padding-top: 15px">
+			<th align="right" valign="top">
+                    Uploaded by:
+                </th><td align="left"><span id="ContentPlaceHolder1_lblUsername">amit888</span></td>
+		</tr><tr style="padding-top: 15px">
+			<th align="right" valign="top">
+                    Discription:
+                </th><td align="left"><pre><span id="ContentPlaceHolder1_lblDiscription">-- I tried my best so far!! ;D
+-- Fixed :
+1. if (wagered) &gt;= profittarget then
+		stop();
+	end
+2. if win then
+
+		nextbet = 0.00000005
+3. Displays error =&gt; [string "chunk"]: 4: attempt to compare nil with number 
+ Added Profit Stop.
+
+Original Post:
+Uploaded by: 	alano04
+Discription: 	
+
+THIS SCRIPT WILL START AT 6.6 CHANCES AND 0.00000005 BET THEN SUNDDENLY INCREASE AFTER A LOSE. BETTING DEPENDS ON HOW MUCH THE CHANCES ARE. AUTO RESET SEED. AUTO HIGH AND LOW.
+
+DONATE IF U WIN. HEHE
+                         3Hc4tDAZMmdrChSYC9omQ1Ln7xd28yxzZP
+
+Seuntjies Note: Your code is redundant as hell. Learn how to use the modulus (%), larger than (&gt;) and smaller than (&lt;) operators. Also, you can use a variable when assigning a value to itself, IE chance=chance*1.1</span></pre>
+                </td>
+		</tr><tr style="padding-top: 50px">
+			<th style="padding-top: 10px;"></th><td align="left" valign="top"><input type="submit" name="ctl00$ContentPlaceHolder1$btnDownload" value="View Script" id="ContentPlaceHolder1_btnDownload" /></td>
+		</tr><tr>
+			<td></td><td><textarea name="ctl00$ContentPlaceHolder1$txtScript" rows="2" cols="20" readonly="readonly" id="ContentPlaceHolder1_txtScript" style="height:400px;width:100%;">
+
+-- Set basebet &amp; profittarget . Done!
+
+basebet = 0.005 --Basebet
+
+profittarget = 100 -- Set profit you want
+
+chance = 6.6
+nextbet = basebet
+function dobet()
+
+
+	if balance &gt;= (balance+profittarget) then
+		stop();
+	end
+
+	if win then
+
+		nextbet = basebet
+  		chance = 6.6
+		A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	
+	else	
+
+		nextbet=previousbet / 0.98
+		chance = 6.6 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+ 			A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+
+
+
+	if currentstreak==-2 then  
+
+		nextbet=previousbet / 0.96
+		chance = 7.2136 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+			A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+ 
+ 
+
+	if currentstreak==-3 then
+
+		nextbet=previousbet / 0.94
+		chance = 7.8843 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-4 then
+
+		nextbet=previousbet / 0.92
+		chance = 8.6173 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-5 then
+
+		nextbet=previousbet / 0.90
+		chance = 9.4185 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-6 then
+
+		nextbet=previousbet / 0.85
+		chance = 10.2941 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+
+
+
+	if currentstreak==-7 then  
+
+		nextbet=previousbet / 0.83
+		chance = 11.2512 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+ 
+ 
+
+	if currentstreak==-8 then
+
+		nextbet=previousbet / 0.81
+		chance = 12.2971 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-9 then
+
+		nextbet=previousbet / 0.79
+		chance = 13.4403 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-10 then
+
+		nextbet=previousbet / 0.77
+		chance = 14.69 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-11 then
+
+		nextbet=previousbet / 0.75
+		chance = 17.5485 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+	if currentstreak==-12 then  
+
+		nextbet=previousbet / 0.73
+		chance = 19.1797 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+ 
+ 
+
+	if currentstreak==-13 then
+
+		nextbet=previousbet / 0.68
+		chance = 20.963 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-14 then
+
+		nextbet=previousbet / 0.66
+		chance = 22.9119 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-15 then
+
+		nextbet=previousbet / 0.64
+		chance = 25.0424 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-16 then
+
+		nextbet=previousbet / 0.62
+		chance = 29.4494 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+
+
+
+	if currentstreak==-17 then  
+
+		nextbet=previousbet / 0.57
+		chance = 32.1878 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+ 
+ 
+
+	if currentstreak==-18 then
+
+		nextbet=previousbet / 0.55
+		chance = 35.18 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-19 then
+
+		nextbet=previousbet / 0.53
+		chance = 38.4511 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-20 then
+
+		nextbet=previousbet / 0.47
+		chance = 42.0257 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end  
+ 
+ 
+
+	if currentstreak==-21 then
+
+		nextbet=previousbet / 0.45
+		chance = 45.9333 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+
+
+	if currentstreak==-22 then
+
+		nextbet=previousbet / 0.40
+		chance = 50.2028 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+	
+	
+	if currentstreak==-23 then
+
+		nextbet=previousbet / 0.38
+		chance = 54.8689 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+	 
+	if currentstreak==-24 then
+
+		nextbet=previousbet / 0.36
+		chance = 59.9709 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+	if currentstreak==-25 then
+
+		nextbet=previousbet / 0.31
+		chance = 65.5456 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+	
+	if currentstreak==-26 then
+
+		nextbet=previousbet / 0.26
+		chance = 71.6405 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+
+	if currentstreak==-27 then
+
+		nextbet=previousbet / 0.24
+		chance = 78.298 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+	
+	if currentstreak==-28 then
+
+		nextbet=previousbet / 0.19
+		chance = 85.5809 * 1.09297052154195
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+
+	if currentstreak==-29 then
+
+		nextbet=previousbet / 0.1
+		chance = 93.5373 * 1.0477
+		J=math.random(100)
+			if J &lt;= 29 then
+				betcount=0
+    				resetseed();
+    			else
+				betcount=betcount+1	
+			end
+	A=math.random(100)
+			if A &lt;= 29 then
+				bethigh=true
+			end
+
+			if A &gt;= 71 then
+				bethigh=false
+			end	
+	end 
+
+end  
+</textarea></td>
+		</tr>
+	</table><br /> 
+        
+        <br /><br /><br /><br /><div id="ContentPlaceHolder1_cbScriptComments_upnlComments">
+		
+        <table id="ContentPlaceHolder1_cbScriptComments_tblHeader" style="width:100%;">
+			<tr>
+				<th class="CommentHeader" align="left">Comments</th><td></td><th align="right"><a id="ContentPlaceHolder1_cbScriptComments_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_LoginView1_HeadRegister">Register</a>
+                        </th>
+			</tr>
+		</table>
+        
+        <div id="ContentPlaceHolder1_cbScriptComments_pnlComments">
+			
+            
+        <div id="ContentPlaceHolder1_cbScriptComments_ctl01_pnlComment">
+				
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl01_tblComment" style="width:100%;">
+					<tr>
+						<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblUsername" style="display:inline-block;width:100px;">moonbind</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblDate">30:10:2018 00:50</span></td>
+					</tr><tr>
+						<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblComment">error: 
+[string "chunk"]:27: attempt to perform arithmetic on global 'betcount' (a nil value)</span></pre>
+                </td>
+					</tr><tr>
+						<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+					</tr>
+				</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl01_pnlResponses" style="width:100%;">
+					<div id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlComment">
+						
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_tblComment" style="width:100%;">
+							<tr>
+								<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblUsername" style="display:inline-block;width:100px;">patrickol</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblDate">24:11:2018 17:30</span></td>
+							</tr><tr>
+								<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblComment">In the beginning of the script there must be 2 parameters set with a value before script starts. these 2 parameters are missing and that is the reson it cannot run. Set this, and you are good to go:
+
+profittarget = 100 -- Set profit you want
+J=0
+betcount=0
+chance = 6.6
+nextbet = basebet
+function dobet()
+
+</span></pre>
+                </td>
+							</tr><tr>
+								<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl01$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+							</tr>
+						</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlResponses" style="width:100%;">
+
+						</div>
+       </div>
+    
+					</div>
+
+				</div>
+       </div>
+    
+			</div>
+<div id="ContentPlaceHolder1_cbScriptComments_ctl02_pnlComment">
+				
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl02_tblComment" style="width:100%;">
+					<tr>
+						<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl02_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblUsername" style="display:inline-block;width:100px;">amit888</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblDate">01:05:2019 05:58</span></td>
+					</tr><tr>
+						<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblComment">--add this before function dobet()
+J=0
+betcount=0
+function dobet()</span></pre>
+                </td>
+					</tr><tr>
+						<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl02_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl02$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl02_LoginView1_HeadRegister">Register</a>
+                        </td>
+					</tr>
+				</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl02_pnlResponses" style="width:100%;">
+
+				</div>
+       </div>
+    
+			</div>
+<div id="ContentPlaceHolder1_cbScriptComments_ctl03_pnlComment">
+				
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl03_tblComment" style="width:100%;">
+					<tr>
+						<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl03_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl03_lblUsername" style="display:inline-block;width:100px;">Papanikolis9</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl03_lblDate">29:05:2019 19:42</span></td>
+					</tr><tr>
+						<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl03_lblComment">this is not working. busted after some time</span></pre>
+                </td>
+					</tr><tr>
+						<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl03_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl03$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl03_LoginView1_HeadRegister">Register</a>
+                        </td>
+					</tr>
+				</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl03_pnlResponses" style="width:100%;">
+
+				</div>
+       </div>
+    
+			</div>
+
+		</div>
+    
+	</div>
+
+    
+</div>
+    
+    
+
+		    </div>
+		    <div class="clearFloat"></div>
+	    </div>
+    </div>
+        
+    
+<script type="text/javascript">
+//<![CDATA[
+var TreeView1_ImageArray =  new Array('', '', '', '/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&t=637103346965614113', '/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&t=637103346965614113', '/WebResource.axd?d=wD47hdxDDlcs_QgdIMJev9hQoLuQgJwxj_MyP2KkJ7_OTXpcjVSPReY3t-kWJwc45PJYVQZlQVNKdvOm06GjuuZT0n811fn6gUcggcMaYZ81&t=637103346965614113');
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdT0PxF9ddqMNQjF6YwL_eVTx2bqS5I9zYYFltTSAEUxtNdnXMRLYSo1DuhX1J-eaIg2&t=637103346965614113';
+WebForm_InitCallback();var TreeView1_Data = new Object();
+TreeView1_Data.images = TreeView1_ImageArray;
+TreeView1_Data.collapseToolTip = "Collapse {0}";
+TreeView1_Data.expandToolTip = "Expand {0}";
+TreeView1_Data.expandState = theForm.elements['TreeView1_ExpandState'];
+TreeView1_Data.selectedNodeID = theForm.elements['TreeView1_SelectedNode'];
+TreeView1_Data.hoverClass = 'TreeView1_8';
+TreeView1_Data.hoverHyperLinkClass = 'TreeView1_7';
+(function() {
+  for (var i=0;i<6;i++) {
+  var preLoad = new Image();
+  if (TreeView1_ImageArray[i].length > 0)
+    preLoad.src = TreeView1_ImageArray[i];
+  }
+})();
+TreeView1_Data.lastIndex = 30;
+TreeView1_Data.populateLog = theForm.elements['TreeView1_PopulateLog'];
+TreeView1_Data.treeViewID = 'ctl00$TreeView1';
+TreeView1_Data.name = 'TreeView1_Data';
+//]]>
+</script>
+</form>
+</body>
+</html>

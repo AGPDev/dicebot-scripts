@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src='https://www.google.com/recaptcha/api.js?render=explicit'></script>
+    <title>
+	DiceBot Script: P 1.0
+</title><meta name="author" content="seuntjie" />
+
+    <script type="text/javascript" src="../Scripts/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-33756749-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+    <script type="text/javascript">
+        function CleanSubmit(els)
+        {
+            for (i=0; i<els.length;i++)
+            {
+                var El = document.getElementById(els[i]);
+                var str = El.value;
+                str = str.replaceAll("<", "&lt;");
+                str = str.replaceAll(">", "&gt;");
+                str = str.replaceAll("[", "\[");
+                str = str.replaceAll("]", "\]");
+                El.value = str;
+            }
+        }
+        String.prototype.replaceAll = function (search, replace) {
+            //if replace is not sent, return original string otherwise it will
+            //replace search string with 'undefined'.
+            if (replace === undefined) {
+                return this.toString();
+            }
+
+            return this.replace(new RegExp('[' + search + ']', 'g'), replace);
+        };
+    </script>
+<link href="App_Themes/default/Default.css" type="text/css" rel="stylesheet" /><link href="App_Themes/default/DefaultCustom.css" type="text/css" rel="stylesheet" /><style type="text/css">
+	.TreeView1_0 { text-decoration:none; }
+	.TreeView1_1 { border-style:none; }
+	.TreeView1_2 { padding:0px 0px 0px 0px; }
+	.TreeView1_3 { border-style:none; }
+	.TreeView1_4 {  }
+	.TreeView1_5 { color:#000006; }
+	.TreeView1_6 { padding:0px 0px 0px 0px; }
+	.TreeView1_7 { color:LightGrey;text-decoration:underline; }
+	.TreeView1_8 { color:LightGrey;text-decoration:underline; }
+
+</style></head>
+<body>
+    <form method="post" action="./scripts.aspx?id=5259" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="TreeView1_ExpandState" id="TreeView1_ExpandState" value="ennnnnnnnncnnnnnncnnnnncnnnnnn" />
+<input type="hidden" name="TreeView1_SelectedNode" id="TreeView1_SelectedNode" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="TreeView1_PopulateLog" id="TreeView1_PopulateLog" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZNW4awoZQOQMC8c7hZKgnPjk-7uXWo0GzoKVlpKWE4ZKV5g5l_xnKJ1IfcDbZQXrgw2&amp;t=637103346965614113" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=agSMDUXPN-pREW5QhKjBzExTfoT-meByRE8sDUzoRZ6ptbqQSzRbK6znFzYlRwklHRaScb5aCXhe4yrHfazFDcIvE-DjCB6OZ_JmBTzSGkBrc5chtDMQ2nYtsB18j4flahTyrj1T9_vjZQAAkndmCg2&amp;t=ffffffff93f2983c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+    function TreeView_PopulateNodeDoCallBack(context,param) {
+        WebForm_DoCallback(context.data.treeViewID,param,TreeView_ProcessNodeData,context,TreeView_ProcessNodeData,false);
+    }
+var TreeView1_Data = null;//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvlL9lzMC6Iu9P6tUHn7Ar46DL044gBHL2DH1WjMVFD7X9AXtWdW9OufAZkSH1M7OAt79SsDugg_NRjAVGPwhH6lpvf_38wNmmGPVEaPoSlEd8F2F69yZnII1RbwpVj--MuYFDpl8glbP65-tXwfTGcQ1&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OIWg3MVKYUDew-Jrx5vsYfl59PeW2MHtjRu6kk6t8KiV08zwwjoX2qHwP41lYaiZDzU_GKVip7MaOA9dKxt5Kc_wlBs1iZX6fRgqpa2DMiXYYAKDMrYqIxpSYrYWNNkn1KyTO0tzfIoIff145hv33-A1&amp;t=ffffffffecf19baa" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1845ED39" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="RtAoMJaH1Xg4fFOUmWyB4tYdVudb6+Ji0TNfrjxIuIrISqt/Lf9oshBA8xS9FSQWhdFNZtQO9u/vo6QgS6M3ekud4wJefZTlnVr4vb57zESUAENk1bGn8Kx7p8pQPN7+9Z8cGnBsiTQ/thNUWnabzAS2L5hRRFugwSxhU0t3BMiSZt0xbG3e7CK0nLhl4zi/J/kgwLFuyECtvZwqkRnCGUX2OKwJA2Zr3pK3kIPIoNl2ha8U4fY2GejowjEL1O8B4keAf7VaAGnI5XlwrKxKLCIdO/5Y4Wssve/yaAaoUIZF+TrCeQbQ3gRyl8kuBHX+y2q+La1zcuz3RzsRzt1r6dcLwI5WMO2DcMR2LZxBxuo=" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl03', 'form1', ['tctl00$ContentPlaceHolder1$cbScriptComments$upnlComments','ContentPlaceHolder1_cbScriptComments_upnlComments','tctl00$ContentPlaceHolder1$cbScriptComments$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl01_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl02$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl02_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl01$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_pnlComment','tctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$ctl01$ctl01$pnlComment','ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_pnlComment'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="main" class="main">
+        <div class="add"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- bot side add -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:250px"
+     data-ad-client="ca-pub-7094887246667995"
+     data-ad-slot="7127215769"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br/><br/>
+<a class="twitter-timeline" href="https://twitter.com/SeuntjieDiceBot" data-widget-id="740092672929632256">Tweets by @SeuntjieDiceBot</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+        <div id="DivPlaceholder">
+
+        
+	    <div id="navDiv">
+            
+		    <div id="Ellipse"><a href="/"> <img src="/Images/logo3.png" style="position:relative; left:-5px;" alt="DiceBot Logo Image"/></a>
+		    </div>
+            <a href="#TreeView1_SkipLink" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip Navigation Links.</a><div id="TreeView1" style="margin-top:10px;">
+	<table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr>
+			<td><a id="TreeView1n0" href="javascript:TreeView_ToggleNode(TreeView1_Data,0,document.getElementById(&#39;TreeView1n0&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n0Nodes&#39;))"><img src="/WebResource.axd?d=wD47hdxDDlcs_QgdIMJev9hQoLuQgJwxj_MyP2KkJ7_OTXpcjVSPReY3t-kWJwc45PJYVQZlQVNKdvOm06GjuuZT0n811fn6gUcggcMaYZ81&amp;t=637103346965614113" alt="Collapse &lt;div class=&#39;Txt_Settings&#39;>DiceBot&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="botpage.aspx" id="TreeView1t0" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>DiceBot</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n0Nodes" style="display:block;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="GettingStarted.aspx" id="TreeView1t1" style="border-style:none;font-size:1em;">Getting Started</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Downloads.aspx" id="TreeView1t2" style="border-style:none;font-size:1em;">Downloads</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Details.aspx" id="TreeView1t3" style="border-style:none;font-size:1em;">Bot Details</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="ProgrammerMode.aspx" id="TreeView1t4" style="border-style:none;font-size:1em;">Programmer Mode</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="http://github.com/seuntjie900/DiceBot" id="TreeView1t5" style="border-style:none;font-size:1em;">Source Code</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="features.aspx" id="TreeView1t6" style="border-style:none;font-size:1em;">Site Features</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://dice.seuntjie.com" id="TreeView1t7" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Play!</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="settings.aspx" id="TreeView1t8" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Settings</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Scripts.aspx" id="TreeView1t9" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Scripts</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n10" href="javascript:TreeView_ToggleNode(TreeView1_Data,10,document.getElementById(&#39;TreeView1n10&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n10Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>Bet Systems&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="BettingSystem.aspx" id="TreeView1t10" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Bet Systems</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n10Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=3" id="TreeView1t11" style="border-style:none;font-size:1em;">d'Alembert</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=4" id="TreeView1t12" style="border-style:none;font-size:1em;">Fibonacci</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=2" id="TreeView1t13" style="border-style:none;font-size:1em;">Labouchere</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=1" id="TreeView1t14" style="border-style:none;font-size:1em;">Martingale</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="BettingSystem.aspx?id=5" id="TreeView1t15" style="border-style:none;font-size:1em;">Preset List</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="seuntjiebot.aspx" id="TreeView1t16" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>SeuntjieBot</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n17" href="javascript:TreeView_ToggleNode(TreeView1_Data,17,document.getElementById(&#39;TreeView1n17&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n17Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>Reviews&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="Reviews.aspx" id="TreeView1t17" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Reviews</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n17Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=14" id="TreeView1t18" style="border-style:none;font-size:1em;">crypto-games</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=1" id="TreeView1t19" style="border-style:none;font-size:1em;">Just-dice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=3" id="TreeView1t20" style="border-style:none;font-size:1em;">Prime Dice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="reviews.aspx?id=6" id="TreeView1t21" style="border-style:none;font-size:1em;">SafeDice</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://forum.seuntjie.com" id="TreeView1t22" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Forum</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><a id="TreeView1n23" href="javascript:TreeView_ToggleNode(TreeView1_Data,23,document.getElementById(&#39;TreeView1n23&#39;),&#39; &#39;,document.getElementById(&#39;TreeView1n23Nodes&#39;))"><img src="/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&amp;t=637103346965614113" alt="Expand &lt;div class=&#39;Txt_Settings&#39;>FAQ&lt;/div>&lt;div id=&#39;Line2&#39;>&lt;/div>" style="border-width:0;" /></a></td><td class="Txt_Settings TreeView1_2" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1" href="FAQs.aspx" id="TreeView1t23" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>FAQ</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><div id="TreeView1n23Nodes" style="display:none;">
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="FAQs.aspx?topic=1" id="TreeView1t24" style="border-style:none;font-size:1em;">DiceBot</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+			<tr style="height:0px;">
+				<td></td>
+			</tr><tr>
+				<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="FAQs.aspx?topic=2" id="TreeView1t25" style="border-style:none;font-size:1em;">SeuntjieBot</a></td>
+			</tr><tr style="height:0px;">
+				<td></td>
+			</tr>
+		</table>
+	</div><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Contact.aspx" id="TreeView1t26" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Contact</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="Donate.aspx" id="TreeView1t27" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>Donate</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="https://www.microsoft.com/store/apps/9NBLGGH4NC5R" id="TreeView1t28" style="border-style:none;font-size:1em;"><div class='Txt_Settings'>CryptoPrice</div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table><table cellpadding="0" cellspacing="0" style="border-width:0;">
+		<tr style="height:0px;">
+			<td></td>
+		</tr><tr>
+			<td><img src="/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&amp;t=637103346965614113" alt="" /></td><td class="Txt_Settings TreeView1_2 Txt_Contact TreeView1_4" onmouseover="TreeView_HoverNode(TreeView1_Data, this)" onmouseout="TreeView_UnhoverNode(this)" style="white-space:nowrap;"><a class="TreeView1_0 Txt_Settings TreeView1_1 Txt_Contact TreeView1_3" href="javascript:__doPostBack(&#39;ctl00$TreeView1&#39;,&#39;s&lt;div class=\&#39;Txt_Settings\&#39;>&lt;a href=\&#39;https://www.youtube.com/channel/UC76fh_3HRaPDxuenoY3gW-w\&#39;>&lt;img src=\&#39;/images/yt.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://twitter.com/SeuntjieDiceBot\&#39;>&lt;img src=\&#39;/images/tw.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://www.facebook.com/ThisIsSeuntjie\&#39;>&lt;img src=\&#39;/images/fb.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>\r\n\t\t\t\t\t&lt;a href=\&#39;https://discord.gg/BSjXjMX\&#39;>&lt;img src=\&#39;/images/dc.png\&#39; height=\&#39;32\&#39;, width=\&#39;32\&#39;/>&lt;/a>&lt;/div>&lt;div id=\&#39;Line2\&#39;>&lt;/div>&#39;)" onclick="TreeView_SelectNode(TreeView1_Data, this,&#39;TreeView1t29&#39;);" id="TreeView1t29" style="border-style:none;font-size:1em;"><div class='Txt_Settings'><a href='https://www.youtube.com/channel/UC76fh_3HRaPDxuenoY3gW-w'><img src='/images/yt.png' height='32', width='32'/></a>
+					<a href='https://twitter.com/SeuntjieDiceBot'><img src='/images/tw.png' height='32', width='32'/></a>
+					<a href='https://www.facebook.com/ThisIsSeuntjie'><img src='/images/fb.png' height='32', width='32'/></a>
+					<a href='https://discord.gg/BSjXjMX'><img src='/images/dc.png' height='32', width='32'/></a></div><div id='Line2'></div></a></td>
+		</tr><tr style="height:0px;">
+			<td></td>
+		</tr>
+	</table>
+</div><a id="TreeView1_SkipLink"></a>
+		    
+		    
+		    
+		    <div class="clearFloat"></div>
+		    <div class="Txt_Donate">
+			
+				    
+                        
+			    
+		    </div>
+		    <div class="clearFloat"></div>
+	    </div>
+            </div>
+	    <div id="colwrap1">
+		<div style="font-size:16px; text-align:center; width:100%; background-color:lightgray">
+		<a href="https://forum.seuntjie.com" style="font-weight:bold; font-size:1.2em;">Need help with the bot or want someone to talk to? <br><span style="font-size:1.3em;">FORUM.SEUNTJIE.COM</span></a>
+	<p style="font-weight:bold; font-size:1em;">The forum is a good platform for asking or offering help with programmer mode scripts</p>
+    </div>
+            <div class="loginDisplay" style="float:right">
+                    <a id="LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="LoginView1_HeadRegister">Register</a>
+                        
+                </div>
+		    <div class="Txt_TITLE">
+			<!--<div style="font-size:0.3em;background-color:lightblue;margin:-5px;padding:10px">Help me fund a 3D printer: <a href="https://bitcointalk.org/index.php?topic=1422705">https://bitcointalk.org/index.php?topic=1422705</a></div>-->
+				    <p class="lastNode">
+    LUA Scripts
+
+			    </p>
+		    </div>
+		    <div class="clearFloat"></div>
+		    <div class="Txt_text">
+			
+				    
+    <span style="width: auto">Download a script for your bot, or upload your own to share with other users.</span><span style="width: auto; padding-left: 15px; margin-left: auto; margin-right: 0px; text-align: right; right: 0px">        <a id="ContentPlaceHolder1_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_LoginView1_HeadRegister">Register</a> to upload
+                        </span>
+    <br />
+    <br/>
+    <div class="prettyprint">
+        <script type="text/javascript">
+            function Show()
+            {
+                var el = document.getElementById("HowToUse");
+                if (el.style.display == "none")
+                    el.style.display = "";
+                else el.style.display = "none";
+            }
+        </script>
+        <a href="#"><div onclick="Show()">How do I use this?</div></a>
+        <div id="HowToUse" style="display:none;"><br /><ol>
+            	<li>Click the View script Button while viewing a script.</li>
+            <li>Open your bot. </li>
+            <li>Set the settings mode to programmer mode. </li>
+            <li>Paste the script above into the code box. </li>
+            <li>Go to the console tab. </li>
+           <li>Type nextbet = xx.xxxx and press enter in the input box at the bottom, where xx.xxxx is the amount of your first bet. </li>
+            <li>Type start() and press enter to start the bot, and stop() to stop to the bot. (you need to be logged in before starting the bot)</li></ol>
+            <br />
+             See <a href="https://bot.seuntjie.com/ProgrammerMode.aspx">The programmer mode page</a> for more information on the programmer mode
+            
+        </div> 
+                </div>
+    <br />
+    <br />
+    <div id="ContentPlaceHolder1_pnlSingleScript">
+	
+        <table id="ContentPlaceHolder1_tblSettingsDetails" cellpadding="5" align="Left" style="width:90%;">
+		<tr style="padding-top: 15px">
+			<th align="right" valign="top" style="width:100px;">Name:</th><td align="left"><span id="ContentPlaceHolder1_lblSettingsName" class="settingslabel">P 1.0</span></td>
+		</tr><tr style="padding-top: 15px">
+			<th align="right" valign="top">
+                    Uploaded by:
+                </th><td align="left"><span id="ContentPlaceHolder1_lblUsername">Punisher</span></td>
+		</tr><tr style="padding-top: 15px">
+			<th align="right" valign="top">
+                    Discription:
+                </th><td align="left"><pre><span id="ContentPlaceHolder1_lblDiscription">--- Por favor, se obtiver ganhos faça uma doação para que eu possa fazer teste em outros scripts
+--- Please, if you win, make a donation so that I can test in other scripts.
+--- Endereço/Address dogecoin
+--- DSGHRrXsVHZxCotQtokBpsZ6mjgd7z5ZC4 ------
+
+martingale-based strategy. starts from a low chance and with losses the chances increase.
+
+
+Estrategia baseada em martingale. começa de uma chance baixa e com as perdas as chances aumentam.</span></pre>
+                </td>
+		</tr><tr style="padding-top: 50px">
+			<th style="padding-top: 10px;"></th><td align="left" valign="top"><input type="submit" name="ctl00$ContentPlaceHolder1$btnDownload" value="View Script" id="ContentPlaceHolder1_btnDownload" /></td>
+		</tr><tr>
+			<td></td><td><textarea name="ctl00$ContentPlaceHolder1$txtScript" rows="2" cols="20" readonly="readonly" id="ContentPlaceHolder1_txtScript" style="height:400px;width:100%;">
+-- BET
+Prebet = 0.000001
+nmin = Prebet
+nmax = Prebet * 1.189325
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+base = n
+mult = 1.01
+s = 0
+-- chance
+chmin = 10
+chmax = 30
+ch1= 32
+ch2= 55
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+nextbet = Prebet
+---Seeds
+seedmin = 5
+seedmax = 10
+function dobet()
+seedrandom = math.random(seedmin*100.0, seedmax*100.0)/100.0
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+r = math.random(2)
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+if r == 1 then
+bethigh = true
+else
+bethigh = false
+end
+roundprofit += currentprofit
+prof = (balance - b) * 100 / b
+print(&quot;  -----------------------------   ----------------------------- &quot;)
+print(&quot;  Lucro - Profit: &quot;..string.format(&quot;%.8f&quot;, profit)..string.format(&quot;      %.3f&quot;, prof)..&quot; % &quot;)
+print(&quot;  -----------------------------   ----------------------------- &quot;)
+print(&quot;              Profit Round: &quot;..string.format(&quot; %.8f&quot;, roundprofit))
+print(&quot;  -----------------------------   ----------------------------- &quot;)
+if win then
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+base = n
+s = 0
+resetseed()
+else
+ch = math.random(ch1*100.0, ch2*100.0)/100.0
+chance = ch
+s = s + base
+base = s/(100/chance/1.01-1)* mult
+for q=1, seedrandom do
+resetseed()
+end
+if(base &lt; n) then
+base = n 
+end
+end
+nextbet = base
+end</textarea></td>
+		</tr>
+	</table><br /> 
+        
+        <br /><br /><br /><br /><div id="ContentPlaceHolder1_cbScriptComments_upnlComments">
+		
+        <table id="ContentPlaceHolder1_cbScriptComments_tblHeader" style="width:100%;">
+			<tr>
+				<th class="CommentHeader" align="left">Comments</th><td></td><th align="right"><a id="ContentPlaceHolder1_cbScriptComments_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_LoginView1_HeadRegister">Register</a>
+                        </th>
+			</tr>
+		</table>
+        
+        <div id="ContentPlaceHolder1_cbScriptComments_pnlComments">
+			
+            
+        <div id="ContentPlaceHolder1_cbScriptComments_ctl01_pnlComment">
+				
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl01_tblComment" style="width:100%;">
+					<tr>
+						<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblUsername" style="display:inline-block;width:100px;">bobwood</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblDate">21:12:2018 05:11</span></td>
+					</tr><tr>
+						<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl01_lblComment">Betting Stopped!
+[string "chunk"]:27: attempt to perform arithmetic on global 'roundprofit' (a nil value</span></pre>
+                </td>
+					</tr><tr>
+						<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+					</tr>
+				</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl01_pnlResponses" style="width:100%;">
+					<div id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlComment">
+						
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_tblComment" style="width:100%;">
+							<tr>
+								<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblUsername" style="display:inline-block;width:100px;">Punisher</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblDate">26:12:2018 15:34</span></td>
+							</tr><tr>
+								<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_lblComment">
+-- BET
+Prebet = 0.000001
+nmin = Prebet
+nmax = Prebet * 1.189325
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+base = n
+mult = 1.01
+s = 0
+roundprofit = 0
+b = balance
+-- chance
+chmin = 10
+chmax = 30
+ch1= 32
+ch2= 55
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+nextbet = Prebet
+---Seeds
+seedmin = 5
+seedmax = 10
+function dobet()
+seedrandom = math.random(seedmin*100.0, seedmax*100.0)/100.0
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+r = math.random(2)
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+if r == 1 then
+bethigh = true
+else
+bethigh = false
+end
+roundprofit += currentprofit
+prof = (balance - b) * 100 / b
+print("  -----------------------------   ----------------------------- ")
+print("  Lucro - Profit: "..string.format("%.8f", profit)..string.format("      %.3f", prof).." % ")
+print("  -----------------------------   ----------------------------- ")
+print("              Profit Round: "..string.format(" %.8f", roundprofit))
+print("  -----------------------------   ----------------------------- ")
+if win then
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+base = n
+s = 0
+resetseed()
+else
+ch = math.random(ch1*100.0, ch2*100.0)/100.0
+chance = ch
+s = s + base
+base = s/(100/chance/1.01-1)* mult
+for q=1, seedrandom do
+resetseed()
+end
+if(base < n) then
+base = n 
+end
+end
+nextbet = base
+end</span></pre>
+                </td>
+							</tr><tr>
+								<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl01$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+							</tr>
+						</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl01_ctl01_pnlResponses" style="width:100%;">
+
+						</div>
+       </div>
+    
+					</div>
+
+				</div>
+       </div>
+    
+			</div>
+<div id="ContentPlaceHolder1_cbScriptComments_ctl02_pnlComment">
+				
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl02_tblComment" style="width:100%;">
+					<tr>
+						<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl02_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblUsername" style="display:inline-block;width:100px;">BetaBitcoin</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblDate">22:12:2018 00:55</span></td>
+					</tr><tr>
+						<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl02_lblComment">This comment has been removed.</span></pre>
+                </td>
+					</tr><tr>
+						<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl02_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl02$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl02_LoginView1_HeadRegister">Register</a>
+                        </td>
+					</tr>
+				</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl02_pnlResponses" style="width:100%;">
+					<div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_pnlComment">
+						
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_tblComment" style="width:100%;">
+							<tr>
+								<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_lblUsername" style="display:inline-block;width:100px;">BetaBitcoin</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_lblDate">22:12:2018 00:56</span></td>
+							</tr><tr>
+								<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_lblComment">Está dando erro conforme o comentário anterior</span></pre>
+                </td>
+							</tr><tr>
+								<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+							</tr>
+						</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_pnlResponses" style="width:100%;">
+							<div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_pnlComment">
+								
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_tblComment" style="width:100%;">
+									<tr>
+										<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_lblUsername" style="display:inline-block;width:100px;">Punisher</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_lblDate">26:12:2018 15:35</span></td>
+									</tr><tr>
+										<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_lblComment">
+-- BET
+Prebet = 0.000001
+nmin = Prebet
+nmax = Prebet * 1.189325
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+base = n
+mult = 1.01
+s = 0
+roundprofit = 0
+b = balance
+-- chance
+chmin = 10
+chmax = 30
+ch1= 32
+ch2= 55
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+nextbet = Prebet
+---Seeds
+seedmin = 5
+seedmax = 10
+function dobet()
+seedrandom = math.random(seedmin*100.0, seedmax*100.0)/100.0
+n = math.random(nmin*100000000, nmax*100000000)/100000000
+r = math.random(2)
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+if r == 1 then
+bethigh = true
+else
+bethigh = false
+end
+roundprofit += currentprofit
+prof = (balance - b) * 100 / b
+print("  -----------------------------   ----------------------------- ")
+print("  Lucro - Profit: "..string.format("%.8f", profit)..string.format("      %.3f", prof).." % ")
+print("  -----------------------------   ----------------------------- ")
+print("              Profit Round: "..string.format(" %.8f", roundprofit))
+print("  -----------------------------   ----------------------------- ")
+if win then
+ch = math.random(chmin*100.0, chmax*100.0)/100.0
+chance = ch
+base = n
+s = 0
+resetseed()
+else
+ch = math.random(ch1*100.0, ch2*100.0)/100.0
+chance = ch
+s = s + base
+base = s/(100/chance/1.01-1)* mult
+for q=1, seedrandom do
+resetseed()
+end
+if(base < n) then
+base = n 
+end
+end
+nextbet = base
+end</span></pre>
+                </td>
+									</tr><tr>
+										<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+									</tr>
+								</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_pnlResponses" style="width:100%;">
+									<div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_pnlComment">
+										
+        <div  style="border-style:Solid; width:auto; Border-Width:1px; Border-Color:LightBlue; padding-left:10px; padding-top:10px; margin-top:5px; margin-bottom:5px; min-width:400px">
+        <table id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_tblComment" style="width:100%;">
+											<tr>
+												<td style="height:42px;width:42px;"><img id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_imgProfile" style="height:40px;width:40px;" /></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_lblUsername" style="display:inline-block;width:100px;">amit888</span></td><td><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_lblDate">01:01:2019 04:11</span></td>
+											</tr><tr>
+												<td></td><td colspan="2">
+                    <pre><span id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_lblComment">This comment has been removed.</span></pre>
+                </td>
+											</tr><tr>
+												<td align="right" colspan="3" style="padding:10px;">&nbsp;&nbsp;&nbsp; 
+                    
+                    <a id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_LoginView1_LogoutStatus" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$cbScriptComments$ctl02$ctl01$ctl01$ctl01$LoginView1$LogoutStatus$ctl02&#39;,&#39;&#39;)">Login</a> or
+                            <a href="Register.aspx" id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_LoginView1_HeadRegister">Register</a>
+                        </td>
+											</tr>
+										</table>
+            
+            <div id="ContentPlaceHolder1_cbScriptComments_ctl02_ctl01_ctl01_ctl01_pnlResponses" style="width:100%;">
+
+										</div>
+       </div>
+    
+									</div>
+
+								</div>
+       </div>
+    
+							</div>
+
+						</div>
+       </div>
+    
+					</div>
+
+				</div>
+       </div>
+    
+			</div>
+
+		</div>
+    
+	</div>
+
+    
+</div>
+    
+    
+
+		    </div>
+		    <div class="clearFloat"></div>
+	    </div>
+    </div>
+        
+    
+<script type="text/javascript">
+//<![CDATA[
+var TreeView1_ImageArray =  new Array('', '', '', '/WebResource.axd?d=FN-IdGHk3IeuM-8xzZ5lTBRS3RkfY6UdRFnJtrvAah4CDRcLz4OyLsUhniJV22G9A42532s5pNYx9fxalAbXpihz0tnJXKbP8tZt6og6SdE1&t=637103346965614113', '/WebResource.axd?d=8Ig4CKxOyXBIduEK8UJR2LMioWftRttP1cVr6CeAZ8K0C4Tyi62uViN2OT505N7yTKGIjCx1jxw070k7ufsfTZQ35zU97NeSeENTfqa9ROA1&t=637103346965614113', '/WebResource.axd?d=wD47hdxDDlcs_QgdIMJev9hQoLuQgJwxj_MyP2KkJ7_OTXpcjVSPReY3t-kWJwc45PJYVQZlQVNKdvOm06GjuuZT0n811fn6gUcggcMaYZ81&t=637103346965614113');
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdT0PxF9ddqMNQjF6YwL_eVTx2bqS5I9zYYFltTSAEUxtNdnXMRLYSo1DuhX1J-eaIg2&t=637103346965614113';
+WebForm_InitCallback();var TreeView1_Data = new Object();
+TreeView1_Data.images = TreeView1_ImageArray;
+TreeView1_Data.collapseToolTip = "Collapse {0}";
+TreeView1_Data.expandToolTip = "Expand {0}";
+TreeView1_Data.expandState = theForm.elements['TreeView1_ExpandState'];
+TreeView1_Data.selectedNodeID = theForm.elements['TreeView1_SelectedNode'];
+TreeView1_Data.hoverClass = 'TreeView1_8';
+TreeView1_Data.hoverHyperLinkClass = 'TreeView1_7';
+(function() {
+  for (var i=0;i<6;i++) {
+  var preLoad = new Image();
+  if (TreeView1_ImageArray[i].length > 0)
+    preLoad.src = TreeView1_ImageArray[i];
+  }
+})();
+TreeView1_Data.lastIndex = 30;
+TreeView1_Data.populateLog = theForm.elements['TreeView1_PopulateLog'];
+TreeView1_Data.treeViewID = 'ctl00$TreeView1';
+TreeView1_Data.name = 'TreeView1_Data';
+//]]>
+</script>
+</form>
+</body>
+</html>
